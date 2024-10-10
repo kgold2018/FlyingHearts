@@ -1,0 +1,34 @@
+* {
+    margin: 0;
+    padding:0;
+}
+
+body {
+    overflow: hidden;
+    background: black;
+    height:100vh;
+}
+
+span {
+    background: url(img/star.png);
+    background-size: cover;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    pointer-events: none;
+    transform : translate(-50%, -50%);
+    animation: heart 5s infinite;
+}
+
+@keyframes heart {
+    0% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+        filter: hue-rotate(0deg);
+    }
+    100% {
+        transform: translate(-50%, -1000%);
+        opacity: 0;
+        filter: hue-rotate(1000deg);
+    }
+}
